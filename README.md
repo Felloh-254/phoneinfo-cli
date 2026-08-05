@@ -8,13 +8,13 @@ carrier, timezone, and line type.
 Directly from GitHub (no need to clone manually):
 
 ```bash
-pip install git+https://github.com/YOUR_USERNAME/phoneinfo-cli.git
+pip install git+https://github.com/Felloh-254/phoneinfo-cli.git
 ```
 
 Or, if you've cloned it locally:
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/phoneinfo-cli.git
+git clone https://github.com/Felloh-254/phoneinfo-cli.git
 cd phoneinfo-cli
 pip install .
 ```
