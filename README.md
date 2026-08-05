@@ -1,25 +1,27 @@
 # phoneinfo-cli
 
 A simple terminal tool to look up info about a phone number: validity, country,
-carrier, timezone, and line type.
+carrier, timezone, and line type. Works from any directory, just like any
+other terminal command.
 
 ## Install
-
-Directly from GitHub (no need to clone manually):
-
-```bash
-pip install git+https://github.com/Felloh-254/phoneinfo-cli.git
-```
-
-Or, if you've cloned it locally:
 
 ```bash
 git clone https://github.com/Felloh-254/phoneinfo-cli.git
 cd phoneinfo-cli
-pip install .
+pipx install .
 ```
 
-Either way, this installs a `phoneinfo` command onto your PATH.
+Don't have `pipx`? Install it first:
+
+```bash
+sudo apt install pipx
+pipx ensurepath
+```
+
+Then restart your terminal (or run `source ~/.bashrc`) and repeat the install step above.
+
+That's it. `phoneinfo` is now available anywhere in your terminal.
 
 ## Usage
 
@@ -43,14 +45,20 @@ If your number doesn't include a country code, pass a region:
 phoneinfo 0972693740 --region ZM
 ```
 
-## Updating
+## Update
 
 ```bash
-pip install --upgrade git+https://github.com/Felloh-254/phoneinfo-cli.git
+cd phoneinfo-cli
+git pull
+pipx install . --force
 ```
 
 ## Uninstall
 
 ```bash
-pip uninstall phoneinfo-cli
+pipx uninstall phoneinfo-cli
 ```
+
+## License
+
+MIT — see [LICENSE](LICENSE)
